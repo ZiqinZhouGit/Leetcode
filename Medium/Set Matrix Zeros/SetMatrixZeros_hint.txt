@@ -1,0 +1,21 @@
+input: matrix
+        [0,1,2,0],
+        [3,4,5,2],
+        [1,3,1,5]
+output: converted matrix
+        [0,0,0,0],
+        [0,4,5,0],
+        [0,3,1,0]
+
+1. we build two arrays stand for two axes of the matrix:
+        
+        indicators_row = ['False' for i in range(len(matrix))]
+        indicators_col = ['False' for j in range(len(matrix[0]))]
+        
+2. we loop around the whole matrix:
+        if there is a '0' in this matrix:
+           both its 'x' axis and 'y' axis will be converted to 'True'
+           
+3. we loop around the whole matrix again:
+        if there is a 'True' in one of the 'x''y' axes:
+           this element of this matrix converted to '0'
