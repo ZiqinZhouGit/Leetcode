@@ -1,0 +1,16 @@
+input: string
+       odd: "babad"
+       even: "cbbd"
+      
+output: the longest palindromic substring
+       odd: "bab" or "aba"
+       even: "bb"
+
+1. we define a scan(string,start, end):
+      while start >= 0 && end < len(string) and start and end stand for the same character:
+        start -= 1
+        end += 1
+   then after this loop, return the substring which suppose to be the longest palindromic.
+
+2. as the length of the substring could be odd or even, so max(scan(s,i,i), scan(s,i,i+1)) could be the max_length 
+   for both situations when the middle of the string is index(i).
