@@ -1,0 +1,11 @@
+input: a given list
+output: boolen value stands for whether subsequence of length 3 exists or not
+
+1. we need two pointers:
+    first = second = float('inf') (infinite large)
+2. then we loop around the list, if there is a third element which larger then the second non infinite 
+   element, return True/else False
+   
+******* if/elif ********
+if: it will excute all the if statements/else no matter whether the previous if statement
+elif: don't excute the later elif/else if the previous if statement is True
