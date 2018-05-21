@@ -1,0 +1,20 @@
+input: list contains all the strings
+       ["eat", "tea", "tan", "ate", "nat", "bat"]
+output: put all the anagrams in one list, then put them into the list
+        [
+          ["ate","eat","tea"],
+          ["nat","tan"],
+          ["bat"]
+          ]
+
+1. we define a function:
+      transfer our string into an ascending order string
+      (so if two strings are anagrams, after the transfer function, they share the same result)
+2. we build a dictionary:
+      we use the transfered string as the key, value is the list of all the anagrams
+   if the transfer of the item is already one of the keys:
+        value.append(item)
+   else:
+        new key is built
+3.build a result = []:
+      loop around the whole dictionary and append all the values
