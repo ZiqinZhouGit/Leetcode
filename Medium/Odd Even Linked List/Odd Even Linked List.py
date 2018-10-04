@@ -14,7 +14,7 @@ class Solution:
             return head
         odd = head
         even = head.next
-        new_head = even # head means new list start(= odd list start); new_head means even list start.
+        new_head = head.next # head means new list start(= odd list start); new_head means even list start.
         while even and even.next:
             odd.next = even.next
             even.next = even.next.next
